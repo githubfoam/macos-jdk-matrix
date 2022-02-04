@@ -10,8 +10,9 @@ on:
 
 
 jobs:
+
 # https://github.com/actions/virtual-environments
-  macos-java-matrix:
+  macos-java-matrix-job:
       name: "java matrix - macos latest/11/ 10.15.7"
       strategy:
         matrix:
