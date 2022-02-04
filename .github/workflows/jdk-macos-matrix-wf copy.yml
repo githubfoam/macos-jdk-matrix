@@ -13,7 +13,7 @@ jobs:
 
 # https://github.com/actions/virtual-environments
   macos-java-matrix-job:
-      name: "java matrix - macos latest/11/ 10.15.7"
+      name: "java matrix"
       strategy:
         matrix:
           os: [macos-11,macos-10.15,macos-latest]
