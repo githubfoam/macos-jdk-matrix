@@ -37,59 +37,59 @@ on:
       - name: "osfingerprinting"
         run: uname -a         
 
-# https://github.com/actions/virtual-environments
-  macos-java-matrix:
-      name: "java matrix  - macos-11"
-      strategy:
-        matrix:
-          # os: [macos-11,macos-10.15,macos-latest]
-          distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]
-          jdk: ['17'] #major versions: 8, 11, 16, 17
-          jdk-arch: [x64]
-      runs-on: macos-11
-      steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: "brew update"
-        run: brew update     
-      - name: "check on brew version"
-        run: brew --version                           
-      - name: "brew cask list"
-        run:   brew list --cask #Warning: Calling brew cask list is deprecated! Use brew list [--cask] instead.
-      - name: "brew list --formula"
-        run: brew list --formula #List all the installed formulas
-      - name: "Get OS X System Version"
-        run: sw_vers       
-      - name: "Get Mac System Details with system_profiler"
-        run: system_profiler | more  
-      - name: "osfingerprinting"
-        run: uname -a           
+# # https://github.com/actions/virtual-environments
+#   macos-java-matrix:
+#       name: "java matrix  - macos-11"
+#       strategy:
+#         matrix:
+#           # os: [macos-11,macos-10.15,macos-latest]
+#           distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]
+#           jdk: ['17'] #major versions: 8, 11, 16, 17
+#           jdk-arch: [x64]
+#       runs-on: macos-11
+#       steps:
+#       - name: Checkout
+#         uses: actions/checkout@v1
+#       - name: "brew update"
+#         run: brew update     
+#       - name: "check on brew version"
+#         run: brew --version                           
+#       - name: "brew cask list"
+#         run:   brew list --cask #Warning: Calling brew cask list is deprecated! Use brew list [--cask] instead.
+#       - name: "brew list --formula"
+#         run: brew list --formula #List all the installed formulas
+#       - name: "Get OS X System Version"
+#         run: sw_vers       
+#       - name: "Get Mac System Details with system_profiler"
+#         run: system_profiler | more  
+#       - name: "osfingerprinting"
+#         run: uname -a           
 
 
-# https://github.com/actions/virtual-environments
-  macos-java-matrix:
-      name: "java matrix - macos-latest 10.15"
-      strategy:
-        matrix:
-          # os: [macos-11,macos-10.15,macos-latest]
-          distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]
-          jdk: ['17'] #major versions: 8, 11, 16, 17
-          jdk-arch: [x64]
-      runs-on: macos-10.15
-      steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: "brew update"
-        run: brew update     
-      - name: "check on brew version"
-        run: brew --version                           
-      - name: "brew cask list"
-        run:   brew list --cask #Warning: Calling brew cask list is deprecated! Use brew list [--cask] instead.
-      - name: "brew list --formula"
-        run: brew list --formula #List all the installed formulas
-      - name: "Get OS X System Version"
-        run: sw_vers       
-      - name: "Get Mac System Details with system_profiler"
-        run: system_profiler | more  
-      - name: "osfingerprinting"
-        run: uname -a  
+# # https://github.com/actions/virtual-environments
+#   macos-java-matrix:
+#       name: "java matrix - macos-latest 10.15"
+#       strategy:
+#         matrix:
+#           # os: [macos-11,macos-10.15,macos-latest]
+#           distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]
+#           jdk: ['17'] #major versions: 8, 11, 16, 17
+#           jdk-arch: [x64]
+#       runs-on: macos-10.15
+#       steps:
+#       - name: Checkout
+#         uses: actions/checkout@v1
+#       - name: "brew update"
+#         run: brew update     
+#       - name: "check on brew version"
+#         run: brew --version                           
+#       - name: "brew cask list"
+#         run:   brew list --cask #Warning: Calling brew cask list is deprecated! Use brew list [--cask] instead.
+#       - name: "brew list --formula"
+#         run: brew list --formula #List all the installed formulas
+#       - name: "Get OS X System Version"
+#         run: sw_vers       
+#       - name: "Get Mac System Details with system_profiler"
+#         run: system_profiler | more  
+#       - name: "osfingerprinting"
+#         run: uname -a  
